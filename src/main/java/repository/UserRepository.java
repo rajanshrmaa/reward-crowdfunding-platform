@@ -5,4 +5,36 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);
+    Optional<User> findByName(String name);
+    Optional<User> findByEmailAndName(String email, String name);
+    Optional<User> findByEmailAndRole(String email, String role);
+    Optional<User> findByEmailAndGoalAmount(String email, Double goalAmount);
+    Optional<User> findByEmailAndDescription(String email, String description);
+    Optional<User> findByEmailAndNameAndRole(String email, String name, String role);
+    Optional<User> findByEmailAndNameAndGoalAmount(String email, String name, Double goalAmount);
+    Optional<User> findByEmailAndNameAndDescription(String email, String name, String description);
+    Optional<User> findByEmailAndRoleAndGoalAmount(String email, String role, Double goalAmount);
+    Optional<User> findByEmailAndRoleAndDescription(String email, String role, String description);
+    Optional<User> findByEmailAndGoalAmountAndDescription(String email, Double goalAmount, String description);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmount(String email, String name, String role, Double goalAmount);
+    Optional<User> findByEmailAndNameAndRoleAndDescription(String email, String name, String role, String description);
+    Optional<User> findByEmailAndNameAndGoalAmountAndDescription(String email, String name, Double goalAmount, String description);
+    Optional<User> findByEmailAndRoleAndGoalAmountAndDescription(String email, String role, Double goalAmount, String description);
+    Optional<User> findByNameAndRole(String name, String role);
+    Optional<User> findByNameAndGoalAmount(String name, Double goalAmount);
+    Optional<User> findByNameAndDescription(String name, String description);
+    Optional<User> findByRoleAndGoalAmount(String role, Double goalAmount);
+    Optional<User> findByRoleAndDescription(String role, String description);
+    Optional<User> findByGoalAmountAndDescription(Double goalAmount, String description);
+    Optional<User> findByNameAndRoleAndGoalAmount(String name, String role, Double goalAmount);
+    Optional<User> findByNameAndRoleAndDescription(String name, String role, String description);
+    Optional<User> findByNameAndGoalAmountAndDescription(String name, Double goalAmount, String description);
+    Optional<User> findByRoleAndGoalAmountAndDescription(String role, Double goalAmount, String description);
+    Optional<User> findByNameAndRoleAndGoalAmountAndDescription(String name, String role, Double goalAmount, String description);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmountAndDescription(String email, String name, String role, Double goalAmount, String description);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmountAndDescriptionAndId(String email, String name, String role, Double goalAmount, String description, Long id);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmountAndDescriptionAndIdAndEmail(String email, String name, String role, Double goalAmount, String description, Long id, String email2);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmountAndDescriptionAndIdAndEmailAndName(String email, String name, String role, Double goalAmount, String description, Long id, String email2, String name2);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmountAndDescriptionAndIdAndEmailAndNameAndRole(String email, String name, String role, Double goalAmount, String description, Long id, String email2, String name2, String role2);
+    Optional<User> findByEmailAndNameAndRoleAndGoalAmountAndDescriptionAndIdAndEmailAndNameAndRoleAndGoalAmount(String email, String name, String role, Double goalAmount, String description, Long id, String email2, String name2, String role2, Double goalAmount2);
 }

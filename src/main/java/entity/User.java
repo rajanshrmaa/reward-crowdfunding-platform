@@ -5,6 +5,8 @@ import lombok.*;
 
 @Entity
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -21,5 +23,21 @@ public class User {
 
     private String password;
 
-    private String role; // e.g., USER, ADMIN
+    private String role;
+
+    private Double goalAmount;
+
+    private String description;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
+                ", goalAmount=" + goalAmount +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
